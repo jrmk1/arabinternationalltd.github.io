@@ -139,50 +139,45 @@ His passion for helping people find jobs inspired him to start J. R. Munni Trave
           <section>
 
   <!-- OUR GROUP OF COMPANIES/comment -->
-   <section>
-  <header>
-    <h3>OUR GROUP OF COMPANIES</h3>
   <section>
   <header>
     <h3>OUR GROUP OF COMPANIES</h3>
   </header>
   
-  <div class="company-list">
-    <span>Arab International Ltd.</span>
-    <span class="separator">|</span>
-    <span>J.R. Munni Travel<br>Agency</span>
-    <span class="separator">|</span>
-    <span>Amiri Properties</span>
-    <span class="separator">|</span>
-    <span>Canadian Student<br>Consultancy</span>
+  <div class="company-grid">
+    <div class="item">Arab International Ltd.</div>
+    <div class="item">J.R. Munni Travel<br>Agency</div>
+    <div class="item">Amiri Properties</div>
+    <div class="item">Canadian Student<br>Consultancy</div>
   </div>
 </section>
    <!-- for font / down -->  
-    <style>
-  .company-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 15px;
+   <style>
+  .company-grid {
+    display: grid;
+    /* This creates 2 columns of equal width. 
+       If you have 4 names, it will always be 2 rows of 2. */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .item {
+    text-align: center;
     font-weight: bold;
-    text-align: center; /* Ensures the split lines stay centered */
-    padding: 20px 0;
+    width: 100%;
   }
 
-  .separator {
-    color: #ccc; /* Makes the separator subtle */
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .company-list {
-      flex-direction: row; /* Keep in rows */
-      gap: 10px;
+  /* Responsive: If screen is very small, switch to 1 column */
+  @media (max-width: 480px) {
+    .company-grid {
+      grid-template-columns: 1fr; /* Forces 1 item per line */
     }
   }
-</style>
-   <!-- for font / up -->  
+</style>   <!-- for font / up -->  
 </section>
             
  <section>
