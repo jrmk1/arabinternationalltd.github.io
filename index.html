@@ -145,31 +145,24 @@ His passion for helping people find jobs inspired him to start J. R. Munni Trave
   </header>
   
   <div class="company-grid">
-    <div class="left-col">Arab International Ltd.</div>
-    <div class="right-col">J.R. Munni Travel Agency</div>
-    <div class="left-col">Amiri Properties</div>
-    <div class="right-col">Canadian Student Consultancy</div>
+    <div class="company-name">Arab International Ltd.</div>
+    <div class="company-name">J.R. Munni Travel Agency</div>
+    <div class="company-name">Amiri Properties</div>
+    <div class="company-name">Canadian Student Consultancy</div>
   </div>
+</section>
    <!-- for font / down -->  
      <style>
   .company-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-    gap: 15px; /* Adjusts space between the two columns */
-    width: 100%; /* Ensures it fills the available area */
-    max-width: 800px; /* Prevents it from stretching too wide */
-    margin: 0 auto; /* Keeps the grid centered as a block, not the text */
+    grid-template-columns: 250px 250px; /* Adjust 250px to make columns wider/narrower */
+    gap: 30px; /* Space between the two columns */
+    justify-content: center; /* This centers the entire grid block on the page */
+    margin: 20px auto;
   }
 
-  .left-col {
-    text-align: left; /* Aligns left side company to the left */
-    padding: 10px;
-    font-weight: bold;
-    border-bottom: 1px solid #eee;
-  }
-
-  .right-col {
-    text-align: right; /* Aligns right side company to the right */
+  .company-name {
+    text-align: left; /* Keeps the text left-aligned within its own box */
     padding: 10px;
     font-weight: bold;
     border-bottom: 1px solid #eee;
