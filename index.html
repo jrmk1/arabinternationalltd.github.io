@@ -144,28 +144,37 @@ His passion for helping people find jobs inspired him to start J. R. Munni Trave
     <h3>OUR GROUP OF COMPANIES</h3>
   </header>
   
-  <div class="company-grid">
-    <div class="company-name">Arab International Ltd.</div>
-    <div class="company-name">J.R. Munni Travel Agency</div>
-    <div class="company-name">Amiri Properties</div>
-    <div class="company-name">Canadian Student Consultancy</div>
+  <div class="company-list">
+    <span>Arab International Ltd.</span>
+    <span class="separator">|</span>
+    <span>J.R. Munni Travel Agency</span>
+    <span class="separator">|</span>
+    <span>Amiri Properties</span>
+    <span class="separator">|</span>
+    <span>Canadian Student Consultancy</span>
   </div>
 </section>
    <!-- for font / down -->  
-     <style>
-  .company-grid {
-    display: grid;
-    grid-template-columns: 250px 250px; /* Adjust 250px to make columns wider/narrower */
-    gap: 30px; /* Space between the two columns */
-    justify-content: center; /* This centers the entire grid block on the page */
-    margin: 20px auto;
+    <style>
+  .company-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap to new lines on small screens */
+    gap: 10px;
+    font-weight: bold;
+    padding: 20px 0;
   }
 
-  .company-name {
-    text-align: left; /* Keeps the text left-aligned within its own box */
-    padding: 10px;
-    font-weight: bold;
-    border-bottom: 1px solid #eee;
+  /* Hides the separator on mobile if it wraps to the end of a line */
+  @media (max-width: 600px) {
+    .separator {
+      display: none; /* Separators disappear to save space on mobile */
+    }
+    .company-list {
+      flex-direction: column; /* Stacks items vertically on very small screens */
+      gap: 5px;
+    }
   }
 </style>
    <!-- for font / up -->  
