@@ -124,37 +124,47 @@ $(document).ready(function() {
       </nav>
       <!-- Main -->
       <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
-            <span class="date">2023</span>
-            <h2>
-              <a href="#">Welcome to 
+  <article class="post featured">
+    <header class="major">
+      <span class="date" id="current-date">Loading...</span>
+      <script>
+        window.addEventListener('load', function() {
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          document.getElementById('current-date').innerHTML = new Date().toLocaleDateString(undefined, options);
+        });
+      </script>
+
+      <h2>
+        <a href="#">Welcome to 
+          <p>Arab International Ltd. (AIL) <br /></a>
+      </h2> 
+      <section class="split contact">
+        <section>
+          <h3>Nice to meet you! We are committed to helping people reach their full potential and stay relevant in today’s ever-changing world of work. Let us help you find your dream job and take your career to the next level.</h3>
+        </section>
+        <section>
+          <h2>
+            <a href="#">Who We Are<br /></a>
+          </h2> 
+          <section class="split contact">
+            <section>
+              <h3>Arab International Ltd. (AIL) is a leading manpower recruiting company based in Bangladesh. We specialize in sending laborers, students, and visitors to foreign countries like Kuwait, Saudi Arabia, Qatar, Dubai, Sudan, Europe, United Systems of America and Canada.
                 <p>
-                    Arab International Ltd. (AIL) <br /></a>
-            </h2> 
-            <section class="split contact">
-          <section>
-            <h3>Nice to meet you! We are committed to helping people reach their full potential and stay relevant in today’s ever-changing world of work. Let us help you find your dream job and take your career to the next level.</h3>
-          </section>
-          <section>
-            <h2>
-              <a href="#">Who We Are<br /></a>
-            </h2> 
-            <section class="split contact">
-          <section>
-            <h3>Arab International Ltd. (AIL) is a leading manpower recruiting company based in Bangladesh. We specialize in sending laborers, students, and visitors to foreign countries like Kuwait, Saudi Arabia, Qatar, Dubai, Sudan, Europe, United Systems of America and Canada.
-<p>
-                  <p>
-Our roots go back to 1993, when Shah Jamal Khandakar founded J. R. Munni Travel Agency. Today, we have evolved and been relaunched as Arab International Ltd. (AIL) to better serve our global partners and clients.
-His passion for helping people find jobs inspired him to start J. R. Munni Travel Agency in 1993 (Bangladesh). J. R. Munni Travel Agency was founded by him in 1993 in Bangladesh and later partnered with Al-Habib Recruite Agency (Hawali, Kuwait) and Suad Mawazi Mizban Office in Kuwait. The company was recently relaunched as “Arab International Ltd.”
-                   <p>
-                  <p>
-              If you have any questions or would like more information about our services, please don’t hesitate to contact us.</h3>
-              <p>
                 <p>
+                Our roots go back to 1993, when Shah Jamal Khandakar founded J. R. Munni Travel Agency. Today, we have evolved and been relaunched as Arab International Ltd. (AIL) to better serve our global partners and clients.
+                His passion for helping people find jobs inspired him to start J. R. Munni Travel Agency in 1993 (Bangladesh). J. R. Munni Travel Agency was founded by him in 1993 in Bangladesh and later partnered with Al-Habib Recruite Agency (Hawali, Kuwait) and Suad Mawazi Mizban Office in Kuwait. The company was recently relaunched as “Arab International Ltd.”
+                <p>
+                <p>
+                If you have any questions or would like more information about our services, please don’t hesitate to contact us.</h3>
+                <p>
+                <p>
+            </section>
           </section>
-          <section>
+        </section>
+      </section>
+    </header>
+  </article>
+</div>
   <!-- OUR GROUP OF COMPANIES/comment -->
   <section>
   <header>
