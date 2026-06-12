@@ -76,37 +76,90 @@
 		<!-- contact us form /down -->
 		
   
-		<p><b>WWe appreciate you taking an interest in AIL. Please fill out the information requested below.
+		<p><b>We appreciate you taking an interest in AIL. Please fill out the information requested below.
 
 			<!-- [Contact Form Section] -->
-<form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-  <div class="fields">
+<!-- [Contact Form Container] -->
+<style>
+  .contact-box {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #333;
+  }
+  .contact-box .field { margin-bottom: 20px; }
+  .contact-box label { font-weight: bold; display: block; margin-bottom: 8px; color: #333; }
+  .contact-box input, .contact-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .contact-box input[type="submit"] {
+    background: #18bfef;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+  }
+  .contact-box input[type="submit"]:hover { background: #15a8d4; }
+</style>
+
+<!-- [Contact Form] -->
+<div class="contact-box">
+  <form id="contact-form" action="https://formspree.io/f/mnjygejk" method="POST">
     <div class="field">
-      <label for="name">Name</label>
+      <label>Name</label>
       <input type="text" name="name" id="name" required />
     </div>
     <div class="field">
-      <label for="email">Email</label>
+      <label>Email</label>
       <input type="email" name="email" id="email" required />
     </div>
     <div class="field">
-      <label for="phone">Phone Number</label>
+      <label>Phone Number</label>
       <input type="tel" name="phone" id="phone" />
     </div>
     <div class="field">
-      <label for="subject">Subject</label>
+      <label>Subject</label>
       <input type="text" name="subject" id="subject" required />
     </div>
     <div class="field">
-      <label for="message">Content</label>
-      <textarea name="message" id="message" rows="3" required></textarea>
+      <label>Content</label>
+      <textarea name="message" id="message" rows="4" required></textarea>
     </div>
-  </div>
-  <ul class="actions">
-    <li><input type="submit" value="Send Message" /></li>
-  </ul>
-</form>
+    <input type="submit" value="Send Message" />
+  </form>
+</div>
 
+<!-- [WhatsApp Trigger Script] -->
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+    const whatsappNumber = "8801844687475"; 
+    
+    // This creates a link that opens WhatsApp with the details
+    const url = `https://wa.me/${whatsappNumber}?text=New Inquiry from ${name}.%0APhone: ${phone}.%0AMessage: ${message}`;
+    
+    // Formspree handles the email, this line handles the WhatsApp redirect
+    window.open(url, '_blank');
+  });
+</script>
+
+<!-- contact us, formspree email/ down -->
+
+			
+			
+<!-- contact us, formspree email/ up -->
 
 <!-- contact us form /dup -->
 			
