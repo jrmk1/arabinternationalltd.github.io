@@ -142,37 +142,52 @@ His passion for helping people find jobs inspired him to start J. R. Munni Trave
   <section>
   <header>
     <h3>OUR GROUP OF COMPANIES</h3>
+  <section>
+  <header>
+    <h3>OUR GROUP OF COMPANIES</h3>
   </header>
   
-  <div class="company-single-line">
-    <span>Arab International Ltd.</span>
-    <span class="separator">|</span>
-    <span>J.R. Munni Travel Agency</span>
-    <span class="separator">|</span>
-    <span>Amiri Properties</span>
-    <span class="separator">|</span>
-    <span>Canadian Student Consultancy</span>
+  <div class="company-container">
+    <div class="company-item">Arab International Ltd.</div>
+    <div class="company-item">J.R. Munni Travel Agency</div>
+    <div class="company-item">Amiri Properties</div>
+    <div class="company-item">Canadian Student Consultancy</div>
   </div>
 </section>
    <!-- for font / down -->  
    <style>
-  .company-single-line {
+  .company-container {
     display: flex;
-    justify-content: space-between; /* Spreads names evenly across the line */
-    align-items: center;
-    flex-wrap: nowrap; /* Forces everything to stay on one line */
-    font-weight: bold;
-    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping when zoomed/small */
+    justify-content: center; /* Keeps them centered */
+    gap: 10px;
     padding: 20px 0;
-    white-space: nowrap; /* Prevents text from wrapping */
   }
 
-  .separator {
-    color: #ccc;
-    margin: 0 10px; /* Adjusts space around the | */
+  .company-item {
+    font-weight: bold;
+    padding: 0 15px;
+    border-right: 1px solid #ccc; /* Adds the separator | look */
+    white-space: nowrap; /* Keeps the name on one line */
+  }
+
+  /* Remove the border from the last item */
+  .company-item:last-child {
+    border-right: none;
+  }
+
+  /* When zoomed, this forces them to wrap evenly */
+  @media (max-width: 1000px) {
+    .company-item {
+      flex: 1 1 45%; /* Forces 2 items per line when space is tight */
+      text-align: center;
+      border-right: none; /* Clean look on wrapped lines */
+      padding: 5px 0;
+    }
   }
 </style>
-</style>   <!-- for font / up -->  
+    
+    <!-- for font / up -->  
 </section>
             
  <section>
