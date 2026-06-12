@@ -144,39 +144,34 @@ His passion for helping people find jobs inspired him to start J. R. Munni Trave
     <h3>OUR GROUP OF COMPANIES</h3>
   </header>
   
-  <div class="company-grid">
-    <div class="item">Arab International Ltd.</div>
-    <div class="item">J.R. Munni Travel<br>Agency</div>
-    <div class="item">Amiri Properties</div>
-    <div class="item">Canadian Student<br>Consultancy</div>
+  <div class="company-single-line">
+    <span>Arab International Ltd.</span>
+    <span class="separator">|</span>
+    <span>J.R. Munni Travel Agency</span>
+    <span class="separator">|</span>
+    <span>Amiri Properties</span>
+    <span class="separator">|</span>
+    <span>Canadian Student Consultancy</span>
   </div>
 </section>
    <!-- for font / down -->  
    <style>
-  .company-grid {
-    display: grid;
-    /* This creates 2 columns of equal width. 
-       If you have 4 names, it will always be 2 rows of 2. */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px;
-    justify-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .item {
-    text-align: center;
+  .company-single-line {
+    display: flex;
+    justify-content: space-between; /* Spreads names evenly across the line */
+    align-items: center;
+    flex-wrap: nowrap; /* Forces everything to stay on one line */
     font-weight: bold;
     width: 100%;
+    padding: 20px 0;
+    white-space: nowrap; /* Prevents text from wrapping */
   }
 
-  /* Responsive: If screen is very small, switch to 1 column */
-  @media (max-width: 480px) {
-    .company-grid {
-      grid-template-columns: 1fr; /* Forces 1 item per line */
-    }
+  .separator {
+    color: #ccc;
+    margin: 0 10px; /* Adjusts space around the | */
   }
+</style>
 </style>   <!-- for font / up -->  
 </section>
             
